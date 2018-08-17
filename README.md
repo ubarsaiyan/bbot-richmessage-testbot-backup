@@ -5,7 +5,7 @@
 
 # Congratulations!  Your bBot is alive
 
-This is your bBot on Rocket.Chat playground!
+This is your bBot on Rocket.Chat Bot playground!
 
 1. Edit the `index.js` to customize your bBot
 1. Logon to [Rocket.Chat bot playground](https://bots.rocket.chat) to interact with your bot

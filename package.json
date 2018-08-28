@@ -1,10 +1,13 @@
 {
-  "name": "bbot-rocketchat-boilerplate",
+  "name": "glitch-rocketchat-bbot",
   "version": "0.0.0",
-  "description": "bRocket is a bBot boilerplate for building Rocket.Chat bots",
+  "description": "A starter bbot for Rocket.Chat BOTs playground",
   "main": "index.js",
   "repository": "git@github.com:Amazebot/bbot-rocketchat-boilerplate.git",
-  "author": "Tim Kinnane <tim.kinnane@amazebot.chat>",
+  "contributors": [
+    "Sing Li <sing.li@rocket.chat>",
+    "Tim Kinnane <tim.kinnane@amazebot.chat>"
+  ],
   "license": "MIT",
   "private": false,
   "engines": {

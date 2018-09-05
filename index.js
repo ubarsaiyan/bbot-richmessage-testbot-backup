@@ -23,6 +23,6 @@ bot.global.direct(/ping back in (\d*)/i, async (b) => {
   return b.respond('Ping :ping_pong:')
 })
 
-bot.global.text(/buttons/, (b) => b.respond('))
+bot.global.text(/buttons/, (b) => b.respond('msg', 'hellll')
 
 bot.start() // 🚀

@@ -30,7 +30,7 @@
     "message-adapter": "rocketchat"
   },
   "dependencies": {
-    "bbot": "^0.3.0"
+    "bbot": "1.2.0"
   },
   "scripts": {
     "start": "node index.js"

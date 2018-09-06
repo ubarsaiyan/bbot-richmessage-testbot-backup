@@ -12,7 +12,7 @@ bot.global.direct(/hi|hello/i, (b) => b.reply('Hey there.'))
 
 // `respondVia` allows using custom platform methods to dispatch response
 // Test with "Hello anyone?"
-bot.global.text(/hi|hello/i, (b) => b.respondVia('react', ':wave:'))
+bot.global.text(/Hi|Hello/, (b) => b.respondVia('react', ':wave:'))
 
 // Branch callbacks allow asynchronous responding, if they return a promise
 // State (b) includes branch matching attributes, see bbot.chat/docs/thought
@@ -23,6 +23,15 @@ bot.global.direct(/ping back in (\d*)/i, async (b) => {
   return b.respond('Ping :ping_pong:')
 })
 
-bot.global.text(/buttons/, (b) => b.respond('{msg:hellll}'))
+bot.global.text(/attach image/i, (b) => {
+  return b.respond({
+    fallback: 'See: https://www.wikiwand.com/en/Three_Laws_of_Robotics',
+    image: 'https://upload.wikimedia.org/wikipedia/en/8/8e/I_Robot_-_Runaround.jpg',
+    title: {
+      text: 'Asimov Three Laws of Robotics',
+      link: 'https://www.wikiwand.com/en/Three_Laws_of_Robotics'
+    }
+  })
+}, { id: 'attach-image' })
 
 bot.start() // 🚀

@@ -34,4 +34,16 @@ bot.global.text(/attach image/i, (b) => {
   })
 }, { id: 'attach-image' })
 
+bot.global.text({
+  contains: 'prize'
+}, (b) => {
+  b.envelope.write('Choose your fate! 🚪... 🎁 ')
+  b.envelope.attach({ color: '#f4426e' })
+  b.envelope.payload
+    .quickReply({ text: 'Door number 1' })
+    .quickReply({ text: 'Door number 2' })
+    .quickReply({ text: 'Door number 3' })
+  return b.respond()
+}, { id: 'door-prize-intro' })
+
 bot.start() // 🚀

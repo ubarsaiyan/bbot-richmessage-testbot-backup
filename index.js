@@ -47,15 +47,20 @@ bot.global.text({
 }, { id: 'door-prize-intro' })
 
 bot.global.text(/text button with url/i, (b) => {
-  return b.respond(
-      {
-        image: 'https://upload.wikimedia.org/wikipedia/en/8/8e/I_Robot_-_Runaround.jpg',
-    title: {
-      text: 'Asimov Three Laws of Robotics',
-      link: 'https://www.wikiwand.com/en/Three_Laws_of_Robotics'
+  return b.respond({
+      attachments: [{
+        title: 'text button with url',
+      actions: [
+        {
+          type: 'button',
+          text: 'Book flights',
+          url: 'http://www.kayak.com',
+          is_webview: false
+        }
+      ]
+    }]
     }
-        
-  }, { id: 'text-button-with-url' })
+  , { id: 'text-button-with-url' })
 })
 
 bot.start() // 🚀

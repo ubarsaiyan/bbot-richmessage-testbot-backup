@@ -39,10 +39,21 @@ bot.global.text({
 }, (b) => {
   b.envelope.write('Choose your fate! 🚪... 🎁 ')
   b.envelope.attach({ color: '#f4426e' })
-  b.envelope.payload
-    .quickReply({ text: 'Door number 1' })
-    .quickReply({ text: 'Door number 2' })
-    .quickReply({ text: 'Door number 3' })
+  b.envelope.payload({
+  "attachments": [
+    {
+      "title": "text button with url",
+      "actions": [
+        {
+          "type": "button",
+          "text": "Book flights",
+          "url": "http://www.kayak.com",
+          "is_webview": false
+        }
+      ]
+    }
+  ]
+})
   return b.respond()
 }, { id: 'door-prize-intro' })
 

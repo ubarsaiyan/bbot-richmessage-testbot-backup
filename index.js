@@ -46,4 +46,16 @@ bot.global.text({
   return b.respond()
 }, { id: 'door-prize-intro' })
 
+bot.global.text(/text button with url/i, (b) => {
+  return b.respond(
+      {
+        image: 'https://upload.wikimedia.org/wikipedia/en/8/8e/I_Robot_-_Runaround.jpg',
+    title: {
+      text: 'Asimov Three Laws of Robotics',
+      link: 'https://www.wikiwand.com/en/Three_Laws_of_Robotics'
+    }
+        
+  }, { id: 'text-button-with-url' })
+})
+
 bot.start() // 🚀

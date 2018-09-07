@@ -61,7 +61,8 @@ bot.global.text(/text button with url/i, (b) => {
   return b.respond({
         // fallback: 'buttnnnn',
         // title: 'text button with url',
-      actions: [
+    text: 'hello',
+      attachments:[{actions: [
         {
           name: 'button_name',
           type: 'button',
@@ -69,9 +70,8 @@ bot.global.text(/text button with url/i, (b) => {
           // url: 'http://www.kayak.com',
           // is_webview: false
         }
-      ]
-    }
-  , { id: 'text-button-with-url' })
+      ]}]
+    })
 })
 
 bot.start() // 🚀

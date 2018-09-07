@@ -48,14 +48,15 @@ bot.global.text({
 
 bot.global.text(/text button with url/i, (b) => {
   return b.respond({
-        fallback: 'buttnnnn',
-        title: 'text button with url',
+        // fallback: 'buttnnnn',
+        // title: 'text button with url',
       actions: [
         {
+          name: 'button_name',
           type: 'button',
           text: 'Book flights',
-          url: 'http://www.kayak.com',
-          is_webview: false
+          // url: 'http://www.kayak.com',
+          // is_webview: false
         }
       ]
     }

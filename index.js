@@ -47,7 +47,7 @@ bot.global.text({
 }, { id: 'door-prize-intro' })
 
 bot.global.text(/text button with url/i, (b) => {
-  return b.respond({
+  return b.bot.adapters.message.driver({
         // fallback: 'buttnnnn',
         // title: 'text button with url',
       actions: [

@@ -48,7 +48,7 @@ bot.global.text({
 
 bot.global.text(/text button with url/i, (b) => {
   return b.respond({
-      attachments: [{
+        fallback: 'buttnnnn',
         title: 'text button with url',
       actions: [
         {
@@ -58,7 +58,6 @@ bot.global.text(/text button with url/i, (b) => {
           is_webview: false
         }
       ]
-    }]
     }
   , { id: 'text-button-with-url' })
 })

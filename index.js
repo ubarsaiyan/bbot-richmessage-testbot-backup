@@ -58,20 +58,11 @@ bot.global.text({
 }, { id: 'door-prize-intro' })
 
 bot.global.text(/text button with url/i, (b) => {
-  return b.respond({
-        // fallback: 'buttnnnn',
-        // title: 'text button with url',
-    text: 'hello',
-      attachments:[{actions: [
-        {
-          name: 'button_name',
-          type: 'button',
-          text: 'Book flights',
-          // url: 'http://www.kayak.com',
-          // is_webview: false
-        }
-      ]}]
-    })
+  b.envelope.payload.quickReply({
+      text: 'Book flights',
+      url: 'http://www.kayak.com'
+  })
+  return b.respond()
 })
 
 bot.start() // 🚀

@@ -24,38 +24,4 @@ bot.global.direct(/ping back in (\d*)/i, async (b) => {
   return b.respond('Ping :ping_pong:')
 })
 
-bot.global.text(/attach image/i, (b) => {
-  return b.respond({
-    fallback: 'See: https://www.wikiwand.com/en/Three_Laws_of_Robotics',
-    image: 'https://upload.wikimedia.org/wikipedia/en/8/8e/I_Robot_-_Runaround.jpg',
-    title: {
-      text: 'Asimov Three Laws of Robotics',
-      link: 'https://www.wikiwand.com/en/Three_Laws_of_Robotics'
-    }
-  })
-}, { id: 'attach-image' })
-
-bot.global.text({
-  contains: 'prize'
-}, (b) => {
-  b.envelope.write('Choose your fate! 🚪... 🎁 ')
-  b.envelope.attach({ color: '#f4426e' })
-  b.envelope.payload({
-  "attachments": [
-    {
-      "title": "text button with url",
-      "actions": [
-        {
-          "type": "button",
-          "text": "Book flights",
-          "url": "http://www.kayak.com",
-          "is_webview": false
-        }
-      ]
-    }
-  ]
-})
-  return b.respond()
-}, { id: 'door-prize-intro' })
-
 bot.start() // 🚀

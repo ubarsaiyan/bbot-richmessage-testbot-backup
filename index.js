@@ -1,4 +1,5 @@
 const bot = require('bbot')
+const richmsg = require('./richmessage.js')
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
 
 // `text` branch types simply respond when regex pattern is met
@@ -56,13 +57,5 @@ bot.global.text({
 })
   return b.respond()
 }, { id: 'door-prize-intro' })
-
-bot.global.text(/text button with url/i, (b) => {
-  b.envelope.payload.quickReply({
-      text: 'Book flights',
-      url: 'http://www.kayak.com'
-  })
-  return b.respond()
-})
 
 bot.start() // 🚀

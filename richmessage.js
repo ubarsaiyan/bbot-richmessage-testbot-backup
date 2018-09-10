@@ -95,7 +95,7 @@ bot.global.text(/button with full webview/i, (b) => {
   return b.respond().catch((err) => console.error(err))
 })
 
-//10. Url Button With Tall Webview (Not working: Not passing the webview_height_ratio)
+// 10. Url Button With Tall Webview (Not working: Not passing the webview_height_ratio)
 bot.global.text(/button with tall webview/i, (b) => {
   b.envelope.write('button with tall webview')
   b.envelope.payload.quickReply({
@@ -107,7 +107,7 @@ bot.global.text(/button with tall webview/i, (b) => {
   return b.respond().catch((err) => console.error(err))
 })
 
-//11. Url Button With Compact Webview (Not working: Not passing the webview_height_ratio)
+// 11. Url Button With Compact Webview (Not working: Not passing the webview_height_ratio)
 bot.global.text(/button with compact webview/i, (b) => {
   b.envelope.write('button with compact webview')
   b.envelope.payload.quickReply({
@@ -123,11 +123,11 @@ bot.global.text(/button with compact webview/i, (b) => {
 bot.global.text(/attachment with buttons/i, (b) => {
   b.envelope.write('Attachment with buttons:')
   b.envelope.attach({ 
-    "title": "Lauri M(title field)",
-      "title_link": "https://www.basketball-reference.com/players/m/markkla01.html",
-      "text": "Should have been rookie of the year (text field)",
-      "description": "What a great player! (description field)",
-      "image_url": "http://www.trbimg.com/img-5b04c449/turbine/ct-spt-bulls-lauri-markkanen-all-rookie-team-20180522",
+    title: 'Lauri M(title field)',
+    title_link: 'https://www.basketball-reference.com/players/m/markkla01.html',
+    text: 'Should have been rookie of the year (text field)',
+    description: 'What a great player! (description field)',
+    image_url: 'http://www.trbimg.com/img-5b04c449/turbine/ct-spt-bulls-lauri-markkanen-all-rookie-team-20180522',
   })
   b.envelope.payload.quickReply({
     type: 'button',

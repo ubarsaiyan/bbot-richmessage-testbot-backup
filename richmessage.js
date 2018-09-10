@@ -27,33 +27,38 @@ bot.global.text(/abcd/i, (b) => {
 }, { id: 'door-prize-intro' })
 
 bot.global.text(/json/i, (b) => {
-  // b.envelope.write('Choose your fate! 🚪... 🎁 ')
-  // b.envelope.attach({ title: 'text button with url' })
-  // b.envelope.payload.quickReply({
-  //   "type": "button",
-  //   "text": "Book flights",
-  //   "url": "http://www.kayak.com",
-  //   "is_webview": false
-  // })
+  b.envelope.write('Horizontal buttons:')
+  b.envelope.attach({ title: 'horizontal text buttons with url', button_alignment: 'horizontal' })
+  b.envelope.payload.quickReply({
+    "type": "button",
+    "text": "Book flights",
+    "url": "http://www.kayak.com",
+    "is_webview": false
+  })
+  b.envelope.payload.quickReply({
+    "type": "button",
+    "text": "Cancel travel request",
+    "url": "https://requests.example.com/cancel/r123456",
+    "is_webview": false
+  })
   return b.respond(
-    {
-      "msg": "hey
-      "title": "horizontal text buttons with url",
-      "button_alignment": "horizontal",
-      "actions": [
-        {
-          "type": "button",
-          "text": "Book flights",
-          "url": "http://www.kayak.com",
-          "is_webview": false
-        },
-        {
-          "type": "button",
-          "text": "Cancel travel request",
-          "url": "https://requests.example.com/cancel/r123456",
-          "is_webview": false
-        }
-      ]
-  }
+    // {
+    //   "title": "horizontal text buttons with url",
+    //   "button_alignment": "horizontal",
+    //   "actions": [
+    //     {
+    //       "type": "button",
+    //       "text": "Book flights",
+    //       "url": "http://www.kayak.com",
+    //       "is_webview": false
+    //     },
+    //     {
+    //       "type": "button",
+    //       "text": "Cancel travel request",
+    //       "url": "https://requests.example.com/cancel/r123456",
+    //       "is_webview": false
+    //     }
+    //   ]
+  // }
 ).catch((err) => console.error(err))
-})
+})  

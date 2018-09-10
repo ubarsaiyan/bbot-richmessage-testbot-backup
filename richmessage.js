@@ -13,7 +13,8 @@ bot.global.text(/text button with url/i, (b) => {
 bot.global.text(/text button with msg in chat window/i, (b) => {
   b.envelope.write('text button with msg in chat window')
   b.envelope.payload.quickReply({ 
-    text: 'hello in chat window'
+    msg: 'hello (message sent via RichMessageBot) :D',
+    text: 'hello in chat window',
   })
   return b.respond().catch((err) => console.error(err))
 })

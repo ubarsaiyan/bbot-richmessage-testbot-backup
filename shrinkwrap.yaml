@@ -1,5 +1,5 @@
 dependencies:
-  bbot: 1.3.0
+  bbot: 1.3.1
 packages:
   /@rocket.chat/sdk/0.2.7:
     dependencies:
@@ -245,7 +245,7 @@ packages:
     dev: false
     resolution:
       integrity: sha512-ReZxvNHIOv88FlT7rxcXIIC0fPt4KZqZbOlivyWtXLt8ESx84zd3kMC6iK5jVeS2qt+g7ftS7ye4fi06X5rtRQ==
-  /bbot/1.3.0:
+  /bbot/1.3.1:
     dependencies:
       '@rocket.chat/sdk': 0.2.7
       '@types/inquirer': 0.0.42
@@ -256,7 +256,7 @@ packages:
       chalk: 2.4.1
       dotenv: 6.0.0
       inquirer: 6.2.0
-      mongoose: /mongoose/5.2.13/mongoose@5.2.13
+      mongoose: /mongoose/5.2.14/mongoose@5.2.14
       request: 2.88.0
       to-regex-range: 4.0.2
       winston: 3.1.0
@@ -266,7 +266,7 @@ packages:
       node: '> 8.0.0'
       npm: '> 5.0.0'
     resolution:
-      integrity: sha512-n0CHQtWOYhHp9TQj1sUqVOmAlAkR6CvySy0L/Rud33YUnv419/rFHe/57STCeNYqSbp32EMuEyixXRcM3FAUew==
+      integrity: sha512-QDnBTnuJg5SOIK2MAzBWX4CXG/7GMUrJzgHlsMEXUzax/g3gQ/MFe1F5F5f7whSLhDYU4o63wXF62lgiJ9N87A==
   /bcrypt-pbkdf/1.0.2:
     dependencies:
       tweetnacl: 0.14.5
@@ -867,16 +867,16 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-BGUxo4a/p5KtZpOn6+z6iZXTHfDxKDvibHQap9uMJqQouwoszvTIO/QbVZkaSX3Spny0jtTEeHc0FwfpGbtEzA==
-  /mongoose-legacy-pluralize/1.0.2/mongoose@5.2.13:
+  /mongoose-legacy-pluralize/1.0.2/mongoose@5.2.14:
     dependencies:
-      mongoose: /mongoose/5.2.13/mongoose@5.2.13
+      mongoose: /mongoose/5.2.14/mongoose@5.2.14
     dev: false
     id: registry.npmjs.org/mongoose-legacy-pluralize/1.0.2
     peerDependencies:
       mongoose: '*'
     resolution:
       integrity: sha512-Yo/7qQU4/EyIS8YDFSeenIvXxZN+ld7YdV9LqFVQJzTLye8unujAWPZ4NWKfFA+RNjh+wvTWKY9Z3E5XM6ZZiQ==
-  /mongoose/5.2.13/mongoose@5.2.13:
+  /mongoose/5.2.14/mongoose@5.2.14:
     dependencies:
       async: 2.6.1
       bson: 1.0.9
@@ -884,7 +884,7 @@ packages:
       lodash.get: 4.4.2
       mongodb: 3.1.4
       mongodb-core: 3.1.3
-      mongoose-legacy-pluralize: /mongoose-legacy-pluralize/1.0.2/mongoose@5.2.13
+      mongoose-legacy-pluralize: /mongoose-legacy-pluralize/1.0.2/mongoose@5.2.14
       mpath: 0.5.1
       mquery: 3.2.0
       ms: 2.0.0
@@ -894,9 +894,9 @@ packages:
     dev: false
     engines:
       node: '>=4.0.0'
-    id: registry.npmjs.org/mongoose/5.2.13
+    id: registry.npmjs.org/mongoose/5.2.14
     resolution:
-      integrity: sha512-KF5pEQNNhqsNKaBkmlLsFh1u5CVe04SoQ5bSQ/7NHvUx+oVnQ6K7tQJaB1wu3To4qFXKJWE41k8OenqrBlluFw==
+      integrity: sha512-0wRX2+08Fvx3iUWX2o33mDPLUsjR0HBFInwwclpfZVAb7Ps63XhYpkjQkqDMmHb7LNl6QVsRhdUIC47cU4EAPg==
   /mpath/0.5.1:
     dev: false
     engines:
@@ -1492,4 +1492,4 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
-  bbot: 1.3.0
+  bbot: ^1.3.1
